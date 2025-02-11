@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo2.jpg";
 import AuthContext from "../../Contex/AuthContex/AuthContext";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const { user, logOutUser } = useContext(AuthContext);
@@ -68,7 +69,18 @@ const Navbar = () => {
           to="/"
           className="text-3xl font-semibold flex items-center space-x-2"
         >
-          <span className="text-blue-600 font-bold underline">TA</span>SS
+          <motion.span
+            animate={{ color: ["#ecff33", "#295015"] }}
+            transition={{
+              duration: 1.5,
+              repeat: Infinity,
+              repeatType: "reverse",
+            }}
+            className="font-bold underline"
+          >
+            TA
+          </motion.span>
+          SS
           <img
             className="w-14 h-11 rounded-lg object-cover"
             src={logo}

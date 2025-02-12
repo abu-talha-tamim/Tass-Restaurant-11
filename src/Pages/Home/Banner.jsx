@@ -1,4 +1,5 @@
 import { easeIn, motion } from "framer-motion"
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -23,7 +24,7 @@ const Banner = () => {
             service, and a warm, inviting ambiance.
           </p>
          
-          <button className="btn btn-info mt-5">Learn More</button>
+          <Link to="/foods"><button className="btn btn-info mt-5">Learn More</button></Link>
         </div>
       </div>
     </div>

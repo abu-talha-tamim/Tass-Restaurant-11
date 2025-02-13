@@ -17,7 +17,7 @@ const Foods = () => {
     .filter((food) =>
       food.foodName.toLowerCase().includes(searchTerm.toLowerCase())
     )
-    .slice(0, 12); // Show only 12 cards
+    // .slice(0, 20); // Show only 12 cards
 
   return (
     <div>

@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import {  useNavigate, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Swal from "sweetalert2";
 import {
@@ -15,6 +15,7 @@ const Purchase = () => {
   const { id } = useParams();
   const {user} = useAuth();
   const [food, setFood] = useState({});
+  const navigate = useNavigate();
  
 
   useEffect(() => {
@@ -74,6 +75,7 @@ const Purchase = () => {
           confirmButtonText: "OK",
         });
       });
+      navigate('/myfoods')
   };
 
   return (
@@ -146,12 +148,12 @@ const Purchase = () => {
           />
 
           {/* Purchase Button */}
-          <Link to="myfoods"><button
+          <button
             type="submit"
             className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition duration-300 flex items-center justify-center gap-2"
           >
             <FaShoppingCart /> Purchase Now
-          </button></Link>
+          </button>
         </form>
       </div>
     </div>

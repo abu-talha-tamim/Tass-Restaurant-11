@@ -8,6 +8,9 @@ import Register from "../Pages/Register/Register";
 import Login from "../Pages/Register/Login";
 import Foods from "../Pages/Foods/Foods";
 import FoodDetails from "../Pages/FoodDetails/FoodDetails";
+import Purchase from "../Pages/FoodDetails/Purchase";
+import PrivateRout from "./PrivateRout";
+import MyFoods from "../Pages/MyFoods/MyFoods";
 
 
   const router = createBrowserRouter([
@@ -24,6 +27,14 @@ import FoodDetails from "../Pages/FoodDetails/FoodDetails";
           path: '/foods/:id',
           element: <FoodDetails/>,
           loader: ({params}) => fetch(`http://localhost:5000/foods/${params.id}`)
+        },
+        {
+          path: '/purchase/:id',
+          element: <PrivateRout><Purchase/></PrivateRout>
+        },
+        {
+          path: '/myfoods',
+          element: <PrivateRout><MyFoods/></PrivateRout>
         },
         {
             path: 'register',

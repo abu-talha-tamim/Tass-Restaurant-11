@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Lottie from "lottie-react";
 import loginData from "../../assets/register- 1736793070223.json"; // Your Lottie animation JSON
 import { FcGoogle } from "react-icons/fc";
@@ -7,6 +7,11 @@ import AuthContext from "../../Contex/AuthContex/AuthContext";
 
 const Login = () => {
   const { logInUser, googleLogin } = useContext(AuthContext);
+
+  const location = useLocation();
+  const navigate = useNavigate();
+  console.log('in login page', location)
+  const from = location.state || '/';
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -17,6 +22,7 @@ const Login = () => {
     logInUser(email, password)
       .then((result) => {
         console.log("Login successful:", result.user);
+        navigate(from);
       })
       .catch((error) => {
         console.error("Login error:", error);

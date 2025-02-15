@@ -17,7 +17,7 @@ const Footer = () => {
         </svg>
         <img  className="w-24 rounded-btn " src="https://i.ibb.co.com/PG9Gk6BF/logo2.jpg" alt="" />
         <p className="font-bold">
-          ACME Industries Ltd.
+        Tass Restaurant.
           <br />
           Providing reliable tech since 1992
         </p>

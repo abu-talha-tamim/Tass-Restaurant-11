@@ -16,7 +16,7 @@ const Banner = () => {
           animate={{x:60,}}
           transition={{duration: 3, delay: 1, ease: easeIn, repeat: Infinity}}
           className="mb-5 text-5xl font-bold"><motion.span
-          animate={{color: ['#e2f437 ', '#8ff6c9', '#f7dc6f  ']}}
+          animate={{color: ['#e2f437 ', '#8ff6c9', '#f7dc6f']}}
           transition={{duration: 1.5, repeat: Infinity}}
           >Tass</motion.span> Restaurant</motion.h1 >
           <p className="mb-5">

@@ -39,6 +39,7 @@ import FoodsGallery from "../Pages/Gallery/FoodsGallery";
           path: '/myfoods',
           element: <PrivateRout><MyFoods/></PrivateRout>
         },
+      
         {
           path: '/addfood',
           element: <PrivateRout><AddFood/></PrivateRout>

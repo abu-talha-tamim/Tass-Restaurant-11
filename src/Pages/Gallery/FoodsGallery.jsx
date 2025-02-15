@@ -37,10 +37,10 @@ const FoodsGallery = () => {
     <div className="min-h-screen bg-gray-100 py-10">
       {/* Page Title */}
       <h1 className="text-4xl font-bold text-center text-blue-600 mb-6">
-         Foods Gallery
+        Foods Gallery
       </h1>
       <p className="text-center text-gray-600 mb-8">
-        Click on  image to view  full size!
+        Click on image to view full size!
       </p>
 
       {/* Gallery Grid */}

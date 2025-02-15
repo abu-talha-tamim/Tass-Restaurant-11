@@ -1,5 +1,6 @@
 Food Ordering Web App
 
+<<<<<<< HEAD
 📌 Overview!
 
 This is a food ordering web application where users can browse different foods, add their own food items, and manage their orders. The app includes authentication and a user-friendly interface.
@@ -39,6 +40,11 @@ Framer Motion for animations
 Express.js & Node.js (Backend - if applicable).
 
 MongoDB (Database - if applicable).
+=======
+📌 Overview
+
+This is a food ordering web application where users can browse different foods, add their own food items, and manage their orders. The app includes authentication and a user-friendly interface.
+>>>>>>> b121cf039f202912085bdc13fca1b8040238ee98
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 

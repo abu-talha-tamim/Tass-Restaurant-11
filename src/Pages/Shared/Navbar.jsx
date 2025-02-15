@@ -45,10 +45,10 @@ const Navbar = () => {
       </li>
       <li>
         <Link
-          to="/contact"
+          to="/foodsgallery"
           className="hover:text-green-500 transition-all duration-300 ease-in-out"
         >
-          Contact
+          Gallery
         </Link>
       </li>
     </>

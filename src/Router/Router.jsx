@@ -12,6 +12,7 @@ import Purchase from "../Pages/FoodDetails/Purchase";
 import PrivateRout from "./PrivateRout";
 import MyFoods from "../Pages/MyFoods/MyFoods";
 import AddFood from "../Pages/AddFood/AddFood";
+import FoodsGallery from "../Pages/Gallery/FoodsGallery";
 
 
 
@@ -41,6 +42,10 @@ import AddFood from "../Pages/AddFood/AddFood";
         {
           path: '/addfood',
           element: <PrivateRout><AddFood/></PrivateRout>
+        },
+        {
+          path: '/foodsgallery',
+          element: <FoodsGallery/>
         },
        
         {

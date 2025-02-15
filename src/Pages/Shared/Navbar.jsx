@@ -20,22 +20,42 @@ const Navbar = () => {
   const linkItems = (
     <>
       <li>
-        <Link to="/">Home</Link>
+        <Link
+          to="/"
+          className="hover:text-green-500 transition-all duration-300 ease-in-out"
+        >
+          Home
+        </Link>
       </li>
       <li>
-        <Link to="/foods">Foods</Link>
+        <Link
+          to="/foods"
+          className="hover:text-green-500 transition-all duration-300 ease-in-out"
+        >
+          Foods
+        </Link>
       </li>
       <li>
-        <Link to="/addfood">Add Food</Link>
+        <Link
+          to="/addfood"
+          className="hover:text-green-500 transition-all duration-300 ease-in-out"
+        >
+          Add Food
+        </Link>
       </li>
       <li>
-        <Link to="/contact">Contact</Link>
+        <Link
+          to="/contact"
+          className="hover:text-green-500 transition-all duration-300 ease-in-out"
+        >
+          Contact
+        </Link>
       </li>
     </>
   );
 
   return (
-    <div className="navbar fixed top-0 left-0 w-full bg-white shadow-md z-50 px-4">
+    <div className="navbar fixed top-0 left-0 w-full bg-white shadow-lg z-50 px-4">
       {/* Left Section */}
       <div className="navbar-start">
         {/* Mobile Menu */}
@@ -91,21 +111,32 @@ const Navbar = () => {
 
       {/* Center Menu (Desktop) */}
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal space-x-4 text-lg">{linkItems}</ul>
+        <ul className="menu menu-horizontal space-x-8 text-lg text-gray-700">
+          {linkItems}
+        </ul>
       </div>
 
       {/* Right Section */}
       <div className="navbar-end">
         {user ? (
-          <button onClick={handleLogOut} className="btn btn-info">
+          <button
+            onClick={handleLogOut}
+            className="btn btn-info text-white hover:bg-red-600 transition-all duration-300 ease-in-out px-6 py-3 rounded-md"
+          >
             LogOut
           </button>
         ) : (
           <>
-            <Link to="/register" className="btn btn-info px-4 py-2">
+            <Link
+              to="/register"
+              className="btn btn-info text-white hover:bg-green-600 transition-all duration-300 ease-in-out px-6 py-3 rounded-md"
+            >
               Register
             </Link>
-            <Link to="/login" className="btn btn-info px-4 py-2">
+            <Link
+              to="/login"
+              className="btn btn-info text-white hover:bg-green-600 transition-all duration-300 ease-in-out px-6 py-3 rounded-md"
+            >
               Login
             </Link>
           </>

@@ -6,7 +6,7 @@ import useAuth from "../../hooks/useAuth";
 const MyFoods = () => {
   const { user } = useAuth();
   const [myFoods, setMyFoods] = useState([]);
-//   const navigate = useNavigate();
+  const navigate = useNavigate(); // Initialize useNavigate
 
   useEffect(() => {
     if (user?.email) {
@@ -20,9 +20,9 @@ const MyFoods = () => {
     }
   }, [user?.email]);
 
-  // Navigate to Update Page
+  // Navigate to Purchase Page with Food ID
   const handleUpdate = (id) => {
-    // navigate('/purchase'); 
+    navigate(`/purchase/${id}`); // Navigate dynamically
   };
 
   return (
@@ -62,7 +62,10 @@ const MyFoods = () => {
                     <div className="avatar">
                       <div className="mask mask-squircle w-16 h-16">
                         <img
-                          src={food.foodImage || "https://via.placeholder.com/100?text=No+Image"}
+                          src={
+                            food.foodImage ||
+                            "https://via.placeholder.com/100?text=No+Image"
+                          }
                           alt={food.foodName}
                           className="object-cover"
                         />
@@ -70,7 +73,9 @@ const MyFoods = () => {
                     </div>
                     <div>
                       <div className="font-bold">{food.foodName}</div>
-                      <div className="text-sm opacity-50">{food.foodOrigin}</div>
+                      <div className="text-sm opacity-50">
+                        {food.foodOrigin}
+                      </div>
                     </div>
                   </div>
                 </td>
@@ -83,12 +88,12 @@ const MyFoods = () => {
 
                 {/* Update Button */}
                 <th>
-                  <Link to="/purchase"><button
+                  <button
                     className="btn btn-info btn-sm flex items-center gap-1"
-                    onClick={() => handleUpdate(food._id)} // Navigate to Update Page
+                    onClick={() => handleUpdate(food._id)} // Navigate to Purchase page
                   >
                     <FaEdit /> Update
-                  </button></Link>
+                  </button>
                 </th>
               </tr>
             ))
